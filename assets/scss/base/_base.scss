@@ -1,0 +1,75 @@
+// _base.scss(reset + normalize)
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+body, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, dl, dd, 
+ol, ul, 
+figure, figcaption, hr, 
+fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    -webkit-appearance: none; 
+    appearance: none;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    background: none;
+    color: inherit;
+    box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 153, 252, 0.7);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+::placeholder {
+    color: #999; 
+}

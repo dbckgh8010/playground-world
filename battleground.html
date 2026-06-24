@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG</title>
+    <link rel="stylesheet" href="assets/css/common/common.css">
+    <link rel="stylesheet" href="assets/css/sub/battleground.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script src="assets/js/common/common.js"></script>
+    <script src="assets/js/sub/battleground.js" defer></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="bg__grid"></div>
+    </div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <h1 class="brand-name">
+                <img src="assets/img/common/site-logo.png" alt="재밌는 놀이터 사이트 로고">
+            </h1>
+        </a>
+        <button type="button" class="mo-menu"></button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item" style="--accent: #68f92e;">
+                    <a href="index.html" class="nav__item-link">
+                        <span class="nav__item-link-dot dot__green"></span>
+                        홈 
+                    </a>
+                </li>
+                <li class="nav__item" style="--accent: #fff200;">
+                    <a href="battleground.html" class="nav__item-link">
+                        <span class="nav__item-link-dot dot__yellow"></span>
+                        배틀그라운드
+                    </a>
+                </li>
+                <li class="nav__item" style="--accent: #fb3f50;">
+                    <a href="valorant.html" class="nav__item-link">
+                        <span class="nav__item-link-dot dot__red"></span>
+                        발로란트
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="sc-pubg">
+            <div class="pubg__wrap">
+                <div class="pubg__header">
+                    <h2 class="pubg__title">배틀그라운드</h2>
+                    <div class="pubg__tab">
+                        <ul class="pubg__tab-list">
+                            <li class="pubg__tab-item">
+                                <button class="pubg__tab-btn" data-tab="weapon" type="button">랜덤 룰렛</button>
+                            </li>
+                            <li class="pubg__tab-item">
+                                <button class="pubg__tab-btn" data-tab="kill" type="button">킬 룰렛</button>
+                            </li>
+                            <li class="pubg__tab-item">
+                                <button class="pubg__tab-btn" data-tab="bingo" type="button">BINGO</button>
+                            </li>
+                            <li class="pubg__tab-item">
+                                <button class="pubg__tab-btn" data-tab="map" type="button">지도</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pubg__main">
+                    <div id="weapon" class="pubg__weapon-roulette pubg__panel">
+                        <div class="roulette-inner">
+                            <div class="roulette-wrap">
+                                <div class="roulette-window item-primary">
+                                    <div class="roulette-list"></div>
+                                </div>
+                                <div class="roulette-window item-second">
+                                    <div class="roulette-list"></div>
+                                </div>
+                                <div class="roulette-window item-ban">
+                                    <div class="roulette-ban"></div>
+                                </div>
+                            </div>
+                            <button class="roulette-btn" type="button"></button>
+                        </div>
+                    </div>
+                    <div id="kill" class="pubg__kill-roulette pubg__panel">
+                        <div class="pubg__kill-roulette__img">
+                            <img src="assets/img/sub/ready.png" alt="준비중입니다.">
+                        </div>
+                    </div>
+                    <div id="bingo" class="pubg__bingo pubg__panel">
+                        <div class="bingo__inner">
+                            <div class="bingo__header">
+                                <ul class="bingo__list">
+                                    <li class="bingo__tab-item">
+                                        <button class="bingo__item-btn" data-tab="bingo-3" type="button">3x3</button>
+                                    </li>
+                                    <li class="bingo__tab-item">
+                                        <button class="bingo__item-btn" data-tab="bingo-4" type="button">4x4</button>
+                                    </li>
+                                    <li class="bingo__tab-item">
+                                        <button class="bingo__item-btn" data-tab="bingo-5" type="button">5x5</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bingo__contain">
+                                <div id="bingo-3" class="bingo-board size-3">
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                </div>
+                                <div id="bingo-4" class="bingo-board size-4">
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                </div>
+                                <div id="bingo-5" class="bingo-board size-5">
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                    <button class="bingo-item" type="button"><span></span></button>
+                                </div>
+                            </div>
+                            <p class="bingo-rule">※ 각 빙고에 맞게 빙고시 성공!</p>
+                        </div>
+                    </div>
+                    <div id="map" class="pubg__map pubg__panel">
+                        <div class="map-inner">
+                            <div class="map-header">
+                                <ul class="map-list">
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="erangel" type="button">에란겔</button>
+                                    </li>
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="miramar" type="button">미라마</button>
+                                    </li>
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="rondo" type="button">론도</button>
+                                    </li>
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="taego" type="button">태이고</button>
+                                    </li>
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="deston" type="button">데스턴</button>
+                                    </li>
+                                    <li class="map-item">
+                                        <button class="map-btn" data-tab="vikendi" type="button">비켄디</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="map-main">
+                                <p class="map__desc">※ 맵에 고정 자동차 / 비밀의 방 등등 위치 표기</p>
+                                <ul class="map__img-list">
+                                    <li id="erangel" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_erangel.jpg" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_erangel.jpg" alt="에란겔 맵 지도">
+                                        </a>
+                                    </li>
+                                    <li id="miramar" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_miramar.jpg" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_miramar.jpg" alt="미라마 맵 지도">
+                                        </a>
+                                    </li>
+                                    <li id="rondo" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_rondo.png" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_rondo.png" alt="론도 맵 지도">
+                                        </a>
+                                    </li>
+                                    <li id="taego" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_taego.jpg" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_taego.jpg" alt="태이고 맵 지도">
+                                        </a>
+                                    </li>
+                                    <li id="deston" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_deston.jpg" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_deston.jpg" alt="데스턴 맵 지도">
+                                        </a>
+                                    </li>
+                                    <li id="vikendi" class="map__img-item">
+                                        <a href="assets/img/sub/battleground/map/battleground_vikendi.jpg" target="_blank">
+                                            <img src="assets/img/sub/battleground/map/battleground_vikendi.jpg" alt="비켄디 맵 지도">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
