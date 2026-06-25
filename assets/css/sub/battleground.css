@@ -17,6 +17,7 @@
     .pubg__tab-btn {padding: 5px;}
 }
 
+.pubg__main {padding-bottom: 200px;}
 .pubg__panel {display: none;}
 .pubg__panel.active {display: block;}
 
