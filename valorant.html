@@ -6,9 +6,11 @@
     <title>VALORANT</title>
     <link rel="icon" type="image/png" href="assets/img/main/game_master_challenge_transparent.png">
     <link rel="stylesheet" href="assets/css/common/common.css">
+    <link rel="stylesheet" href="assets/css/sub/valorant.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <script src="assets/js/common/common.js"></script>
+    <script src="assets/js/sub/valorant.js" defer></script>
 </head>
 <body>
     <div class="bg">
@@ -44,6 +46,23 @@
             </ul>
         </nav>
     </header>
-    <main class="main"></main>
+    <main class="main">
+        <section class="valorant">
+            <div class="valorant__header"></div>
+            <div class="valorant__main">
+                <div class="valorant__role-tab">
+                    <button data-role="all">전체</button>
+                    <button data-role="duelist">타격대</button>
+                    <button data-role="initiaor">척후대</button>
+                    <button data-role="controller">전략가</button>
+                    <button data-role="sentinel">감시자</button>
+                </div>
+                <div class="valorant__roulette-box">
+                    <ul class="valorant__roulette-list"></ul>
+                </div>
+                <button class="spin-btn" type="button">START</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

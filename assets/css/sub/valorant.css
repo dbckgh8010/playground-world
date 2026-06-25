@@ -1,0 +1,17 @@
+.valorant {display: flex; flex-direction: column; align-items: center; padding: 100px 0;}
+.valorant-title {color: #da0000;}
+.valorant__main {display: flex; flex-direction: column; align-items: center;}
+
+.valorant__role-tab {display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; align-items: center; justify-content: center;}
+.valorant__role-tab button {padding: 10px; font-size: 1rem; font-weight: 900; background-color: #c4f000; border: none; cursor: pointer;}
+.valorant__role-tab button:hover {background-color: rgb(73, 73, 255); color: #fff;}
+.valorant__role-tab button.is-active {background-color: rgb(73, 73, 255);}
+
+.valorant__roulette-box {position: relative; width: 1000px; height: 1000px; margin-top: 50px; background: url("../../img/sub/valorant/valorant-agent-bg.png") no-repeat center / cover; overflow: hidden;}
+.valorant__roulette-list {position: absolute; top: 0; left: 0; display: flex; flex-wrap: nowrap; width: max-content; height: 100%; padding: 0; margin: 0; list-style: none;}
+.valorant__agent-item {display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; width: 1000px; height: 100%;}
+.valorant__agent-item img {width: 300px; height: 500px; object-fit: contain;}
+.valorant__agent-item span {padding-top: 20px; font-size: 2rem; color: #fff;}
+
+.spin-btn {display: flex; align-items: center; justify-content: center; width: 150px; height: 70px; margin-top: 50px; font-size: 2rem; font-weight: 900; background-color: #da0000; border: none; border-radius: 60px; cursor: pointer;}
+.spin-btn:hover {background-color: #ca45d1;}
