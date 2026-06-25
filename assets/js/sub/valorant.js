@@ -80,23 +80,38 @@ function createRoulette(role) {
 spinBtn.addEventListener('click', () => {
     if (isSpinning) return;
     if (currentRouletteData.length === 0) return;
-
+    
     isSpinning = true;
+
+    // 1. 현재 화면에 렌더링된 부모 박스와 요원 칸의 실제 크기를 가져옵니다.
+    const rouletteBox = document.querySelector('.valorant__roulette-box');
+    const currentItem = document.querySelector('.valorant__agent-item');
+    
+    const boxWidth = rouletteBox ? rouletteBox.getBoundingClientRect().width : 1000;
+    const dynamicWidth = currentItem ? currentItem.getBoundingClientRect().width : 1000;
 
     const targetIndex = 20; 
     const winner = currentRouletteData[targetIndex];
-    const moveX = targetIndex * ITEM_WIDTH;
-    
+
+    // 2. ★ [중앙 정렬 보정 공식]
+    // 원래 이동해야 할 거리에서 (부모 박스 절반 - 요원 칸 절반)만큼의 오차를 빼줍니다.
+    const boxCenterOffset = (boxWidth / 2) - (dynamicWidth / 2);
+    const moveX = (targetIndex * dynamicWidth) - boxCenterOffset;
+
+    console.log("보정 공식이 반영된 최종 가로 거리:", moveX);
+
+    // 3. 애니메이션 연출 구동
     rouletteList.style.transition = 'transform 4s cubic-bezier(0.15, 0.85, 0.2, 1)';
     rouletteList.style.transform = `translateX(-${moveX}px)`;
-    
+
+    // 후속 리셋 로직은 기존과 동일...
     setTimeout(() => {
         alert(`🎉 당첨된 요원: ${winner.name}`);
         rouletteList.style.transition = 'none';
         rouletteList.style.transform = 'translateX(0)';
+        
         const activeRole = document.querySelector('.valorant__role-tab button.is-active')?.dataset.role || 'all';
         createRoulette(activeRole);
-        
         isSpinning = false;
     }, 4100);
 });
