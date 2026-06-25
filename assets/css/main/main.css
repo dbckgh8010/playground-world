@@ -1,7 +1,7 @@
 .main {display: block; width: 100%;}
 
 .sc-hero {display: flex; flex-direction: column; align-items: center; padding: 100px 10px; margin: 0 auto; max-width: 1000px; perspective: 1000px;}
-.hero__label {color: #0000; font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 60%, #f472b6 100%); background-clip: text;}
+.hero__label {text-align: center; color: #0000; font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 60%, #f472b6 100%); background-clip: text;}
 .hero__text {padding-top: 30px; font-size: 1.5rem; font-weight: 700; color: #d4c0ff;}
 .sc-hero img {width: 300px; padding: 50px 0; animation: spin 10s linear infinite; transform-style: preserve-3d; filter: drop-shadow(0 0 20px rgba(0,0,0,1));}
 
