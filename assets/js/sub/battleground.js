@@ -2,91 +2,91 @@ const weapons = [
     {
         name: 'ace32',
         type: 'AR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/AR/weapons-ace32.webp'
     },
     {
         name: 'aug_a3',
         type: 'AR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/AR/weapons-aug_a3.webp'
     },
     {
         name: 'm416',
         type: 'AR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/AR/weapons-m416.webp'
     },
     {
         name: 'beryl_m762',
         type: 'AR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/AR/weapons-beryl_m762.webp'
     },
     {
         name: 'm16a4',
         type: 'AR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/AR/weapons-m16a4.webp'
     },
     {
         name: 'akm',
         type: 'AR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/AR/weapons-akm.webp'
     },
     {
         name: 'mk47_mutant',
         type: 'AR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/AR/weapons-mk47_mutant.webp'
     },
     {
         name: 'scar-l',
         type: 'AR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/AR/weapons-scar-l.webp'
     },
     {
         name: 'dragunov',
         type: 'DMR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/DMR/weapons-dragunov.webp'
     },
     {
         name: 'mini14',
         type: 'DMR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/DMR/weapons-mini14.webp'
     },
     {
         name: 'mk12',
         type: 'DMR',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/DMR/weapons-mk12.webp'
     },
     {
         name: 'sks',
         type: 'DMR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/DMR/weapons-sks.webp'
     },
     {
         name: 'SLR',
         type: 'DMR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/DMR/weapons-slr.webp'
     },
     {
         name: 'm249',
         type: 'LMG',
-        ammo: '5.56',
+        ammo: '5',
         img: 'assets/img/sub/battleground/shared/etc/weapons-m249.webp'
     },
     {
         name: 'dp28',
         type: 'LMG',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/etc/weapons-dp28.webp'
     },
     {
@@ -158,19 +158,19 @@ const weapons = [
     {
         name: 'kar98k',
         type: 'SR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/SR/weapons-kar98k.webp'
     },
     {
         name: 'm24',
         type: 'SR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/SR/weapons-m24.webp'
     },
     {
         name: 'mosin_nagant',
         type: 'SR',
-        ammo: '7.62',
+        ammo: '7',
         img: 'assets/img/sub/battleground/shared/SR/weapons-mosin_nagant.webp'
     },
 ]
@@ -187,9 +187,9 @@ const bans = [
     '3LV 금지',
     '6배 이상 금지',
     '도트 사용금지',
-    '5.56mm 금지',
-    '7.62mm',
-    '9mm 금지',
+    '5 탄 금지',
+    '7 탄 금지',
+    '9 탄 금지',
 ]
 
 
@@ -274,8 +274,16 @@ rouletteBtn.addEventListener('click', () => {
     banList.style.transform = `translateY(-${banTargetY}px)`; 
 
     setTimeout(() => {
+        console.log("선택된 밴:", selecteBan);
+        console.log("banType:", banType);
 
-        const filteredWeapons = weapons.filter(weapon => {return weapon.type !== banType && weapon.ammo !== banType;});
+        const filteredWeapons = weapons.filter(weapon => {
+            return weapon.type !== banType && weapon.ammo !== banType;
+        });
+
+        console.log(
+            filteredWeapons.filter(w => w.ammo === banType)
+        );
         const shuffledFiltered = shuffle(filteredWeapons);
         const renderFilteredWeapons = [
             ...shuffledFiltered, ...shuffledFiltered, ...shuffledFiltered, ...shuffledFiltered, ...shuffledFiltered
